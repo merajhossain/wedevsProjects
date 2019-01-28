@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2019, 5:19:49 PM
+    Author     : Meraj Hossain
+*/
+.custom-notification {
+  display: flex;
+  align-items: center;
+  padding: 40px 55px;
+  border-radius: 5px;
+  position: relative;
+  top: -35px;
+  z-index: 1; }
+
+.card-min-height {
+  min-height: 180px; }
+
+.custom-card-header {
+  cursor: pointer;
+  border-color: #eaefe5;
+  background-color: #fff;
+  border-radius: 5px;
+  border-bottom: none; }
+
+.custom-card-body {
+  padding: 0px 80px 15px 80px; }
+
+.product-screen-short-icon-right {
+  position: absolute;
+  top: 5px;
+  right: -25px; }
+
+.left-line-cross-image {
+  margin: 50px 0px 0px -210px; }
+
+.right-line-cross-image {
+  margin: 50px -210px 0px 0px; }
+
+.product-screen-short-icon-left {
+  position: absolute;
+  top: 5px;
+  left: -25px; }
+
+/***bottom ad section***/
+.bottom-ad-section {
+  background: url("../img/Bottom-CTA_BG-1.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%; }
+
+.rocket-icon-wrapper {
+  position: relative;
+  width: 100%; }
+
+.rocket-icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 35px 15PX; }
+
+/*# sourceMappingURL=body-part.css.map */

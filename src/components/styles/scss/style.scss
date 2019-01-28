@@ -1,0 +1,230 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2019, 2:16:40 AM
+    Author     : Meraj Hossain
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/***Varialbe declare***/
+$whiteBg:#ffffff;
+$primary-fontcolor: #737779;
+$white-fontcolor: #ffffff;
+$dark-fontcolor: #1b1b1b;
+$blue-fontcolor: #14bff9;
+$blue-fontcolor-second: #37b6ff;
+$blue-fontcolor-third: #c0ebff;
+$gray-fontcolor: #b7bec2;
+$section-padding: 110px;
+$slider-spec:185px;
+$color-green:#7e8578;
+$dark-gray-fontcolor: #8a8a8a;
+/*custom css*/
+*{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif; 
+}
+body,html {
+  height: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+.btn{
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+.btn:hover{
+    color: $blue-fontcolor-second;
+}
+.no-padding-lg{
+    padding-left: 0;
+    padding-right: 0;
+}
+.vertical-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-shadow-default{
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.2);
+}
+.box-shadow-blue{
+    box-shadow: 0px 0px 60px 0px rgba(20,191,249,0.2);
+}
+
+/**font color**/
+.text-white{
+    color: $white-fontcolor;
+}
+.text-font{
+    color: $primary-fontcolor;
+}
+.text-dark{
+    color: $dark-fontcolor;
+}
+.text-blue{
+    color: $blue-fontcolor;
+}
+.text-blue-second{
+    color: $blue-fontcolor-second;
+}
+.text-blue-third{
+    color: $blue-fontcolor-third;
+}
+.text-gray{
+    color: $gray-fontcolor;
+}
+.white-bg{
+    background: $whiteBg;
+}
+.text-green{
+    color: $color-green;
+}
+.text-dark-gray{
+    color: $dark-gray-fontcolor;
+}
+.margin-top-lg{
+    margin-top: 40px;
+}
+/**Gradient mixin***/
+@mixin gradient($gradientColorOne, $gradientColorSecond, $gradientOperationOne, $gradientOperationTwo){
+    background: $gradientColorOne; /* Old browsers */
+    background: -moz-linear-gradient($gradientOperationOne, $gradientColorOne 0%, $gradientColorSecond 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient($gradientOperationOne, $gradientColorOne 0%,$gradientColorSecond 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to $gradientOperationTwo, $gradientColorOne 0%,$gradientColorSecond 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.gradientBG{@include gradient(#0066ec,#00bcf9,top,bottom)}
+.gradientGreen{@include gradient(#9fee00, #60b100,top,bottom)}
+.gradientBlue{@include gradient(#00bdfa, #0066ec, left, right)}
+.whiteBlue{@include gradient(#ffffff, #ffffff, left, right)}
+.gradientOrange{@include gradient(#ffba5d, #ff9733, left, right)}
+.gradientPurpal{@include gradient(#c578ff, #957aff, left, right)}
+/**Button mixin**/
+
+@mixin btn-varient($btnBg, $btnColor, $focus){
+    background: $btnBg;
+    color: $btnColor;
+    border: 1px solid $btnBg;
+    
+    &:hover{
+        background: transparent;
+        color: $btnBg;
+        border: 1px solid $btnBg;
+    }
+    &:focus{
+        background: transparent;
+        color: $btnBg;
+        border: 1px solid $btnBg;
+        box-shadow: 0 0 0 0.2rem $focus;
+    }
+}
+.custom-btn-default{@include btn-varient(#ffffff, #2b62c9, rgba(222,222,222,.5))}
+.custom-btn-success{@include btn-varient(#dde7d7, #458200, rgba(221,231,215,.5))}
+.custom-btn-danger{@include btn-varient(#eae3dc, #ba8c61, rgba(234,227,220,.5))}
+.custom-btn-info{@include btn-varient(#e0e8f7, #2b62c9, rgba(224,232,237,.5))}
+.custom-btn-primary{@include btn-varient(#2b62c9, #ffffff, rgba(43,98,201,.5))}
+.custom-success-btn-icon{@include btn-varient(#14d6e8, #ffffff, rgba(20,214,232,.5))}
+.custom-primary-btn-icon{@include btn-varient(#37b6ff, #ffffff, rgba(55,182,255,.5))}
+.custom-outline-btn{@include btn-varient(#ffffff, #37b6ff, rgba(78,211,15,.5))}
+/**Font weight**/
+@mixin font-weight($weight){
+    font-weight: $weight;
+}
+.font-weight-700{@include font-weight(100)};
+.font-weight-700{@include font-weight(200)};
+.font-weight-700{@include font-weight(300)};
+.font-weight-700{@include font-weight(400)};
+.font-weight-700{@include font-weight(500)};
+.font-weight-700{@include font-weight(600)};
+.font-weight-700{@include font-weight(700)};
+.font-weight-800{@include font-weight(800)};
+.font-weight-900{@include font-weight(900)};
+
+/**heading mixin**/
+@mixin heading($fontSize, $fontColor, $fontWeight){
+    font-size: $fontSize;
+    color: $fontColor;
+    font-weight: $fontWeight;
+    line-height: 1.4em;
+}
+h1{@include heading(36px, #1b1b1b, 700)}
+h2{@include heading(25px, #1b1b1b, 700)}
+h3{@include heading(20px, #1b1b1b, 700)}
+
+@mixin fontSize($fontSize){
+    font-size: $fontSize;
+    font-family: "Lato", Sans-serif;
+}
+.font-size-15{@include fontSize(15px)}
+.font-size-18{@include fontSize(18px)}
+.font-size-22{@include fontSize(22px)}
+.font-size-35{@include fontSize(35px)}
+.font-size-25{@include fontSize(25px)}
+.font-size-20{@include fontSize(20px)}
+.font-size-45{@include fontSize(45px)}
+.font-size-50{@include fontSize(45px)}
+.no-bg{
+    background: transparent;
+    border-color: transparent;
+}
+/***font colors****/
+.color-primary{
+    color: $primary-fontcolor;
+}
+.color-white{
+    color: $white-fontcolor;
+}
+.color-dark{
+    color: $dark-fontcolor;
+}
+.color-blue{
+    color: $blue-fontcolor;
+}
+.color-blue-second{
+    color: $blue-fontcolor-second;
+}
+/***Background color****/
+@mixin bgColor($bgcolor){
+    background: $bgcolor;
+    border-top:1px solid #dce7f1;
+}
+.greenBg{@include bgColor(#f5f7f3)}
+.grayBg{@include bgColor(#f5f7fa)}
+.bgRed{@include bgColor(#f9f7f5)}
+/*********/
+/***icon ball**/
+@mixin iconBall($gradientOne, $gradientTwo, $gradientPosition, $ballRadius){
+    background: $gradientOne; /* Old browsers */
+    background: -moz-linear-gradient($gradientPosition, $gradientOne 0%, $gradientTwo 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient($gradientPosition, $gradientOne 0%,$gradientTwo 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $gradientOne 0%, $gradientTwo 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border-radius: $ballRadius;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 6px;
+    display: inline-block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px $gradientOne;
+}
+.iconBall-one{@include iconBall(#c177fe, #9178fa, top, 50%)}
+.iconBall-second{@include iconBall(#44efb3, #1bd7dd, top, 50%)}
+.iconBall-third{@include iconBall(#ff9d78, #fe8885, top, 50%)}
+/****wave*****/
+
+/***bottom ad section***/
+@import 'header-part.scss';
+@import 'animations.scss';
+@import 'body-part.scss';
+@import 'footer-part.scss';
+@import 'mediaScreen.scss';
+
+
+

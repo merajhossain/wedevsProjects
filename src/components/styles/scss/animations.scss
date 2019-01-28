@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2019, 1:42:05 AM
+    Author     : Meraj Hossain
+*/
+@mixin greenpluse($shadowColorOne, $shadowColorTwo){
+    .pulsegreen {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 30px 30px 30px 30px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColorOne;
+        animation: pulsegreen 2s infinite;
+
+        @-webkit-keyframes pulsegreen {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 $shadowColorOne;
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 20px $shadowColorTwo;
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 $shadowColorTwo;
+            }
+          }
+      }
+     
+}
+
+@include greenpluse(rgba(158,237,0,0.4), rgba(158,237,0,0));
+
+@mixin bluepluse($shadowColorThree, $shadowColorFour){
+    .pulseblue {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 30px 30px 30px 30px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColorThree;
+        animation: pulseblue 2s infinite;
+
+        @-webkit-keyframes pulseblue {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 $shadowColorThree;
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 20px $shadowColorFour;
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 $shadowColorFour;
+            }
+          }
+      }
+      
+}
+@include bluepluse(rgba(22,192,244,0.4), rgba(22,192,244,0));
+
+@mixin orangepluse($shadowColorFive, $shadowColorSix){
+    .pulseorange {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 30px 30px 30px 30px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColorFive;
+        animation: orangepluse 2s infinite;
+
+        @-webkit-keyframes orangepluse {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 $shadowColorFive;
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 20px $shadowColorSix;
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 $shadowColorSix;
+            }
+          }
+      }
+      
+}
+@include orangepluse(rgba(255,182,92,0.4), rgba(255,150,50,0));
+
+@mixin DarkBlueEpluse($shadowColorSeven, $shadowColorEight){
+    .pulseDarkBlue {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 30px 30px 30px 30px;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColorSeven;
+        animation: pulseDarkBlue 2s infinite;
+
+        @-webkit-keyframes pulseDarkBlue {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 $shadowColorSeven;
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 20px $shadowColorEight;
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 $shadowColorEight;
+            }
+          }
+      }
+      
+}
+@include DarkBlueEpluse(rgba(195, 120, 255, 0.4), rgba(195, 120, 255,0));
+
+@mixin WhiteEpluse($shadowColorSeven, $shadowColorEight){
+    .pulseWhite {
+        display: block;
+        cursor: pointer;
+        box-shadow: 0 0 0 $shadowColorSeven;
+        animation: pulseWhite 2s infinite;
+
+        @-webkit-keyframes pulseWhite {
+            0% {
+              -webkit-box-shadow: 0 0 0 0 $shadowColorSeven;
+            }
+            70% {
+                -webkit-box-shadow: 0 0 0 20px $shadowColorEight;
+            }
+            100% {
+                -webkit-box-shadow: 0 0 0 0 $shadowColorEight;
+            }
+          }
+      }
+      
+}
+@include WhiteEpluse(rgba(255, 255, 255, 0.4), rgba(255, 120, 255,0));

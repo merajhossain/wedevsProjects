@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 19, 2019, 9:00:30 PM
+    Author     : Meraj Hossain
+*/
+@media screen and (max-width: 1023px) {
+    .left-line-cross-image{
+        margin: 50px 0px 0px 0px; 
+    }
+    .right-line-cross-image{
+        margin: 50px 0px 0px 0px; 
+    }
+    .top-menu-wrapper{
+        position: relative;
+        background: #0067ec;
+    } 
+    .navbar-toggler{
+        background: #fff;
+    }
+    .navbar-collapse{
+        margin-top: 60px;
+    }
+    nav.top-menu .dropdown-menu li a, nav.top-menu a{
+        padding: 10px 20px;
+    }
+    ul.dropdown-menu {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .no-padding-lg{
+        padding-left: 15;
+        padding-right: 15;
+    }
+    .slider-space {
+        padding: 80px 0px 125px 0px;
+    }
+    .slider-content{
+        text-align: center;
+    }
+    .slider-bg-image{
+        margin: 70px 0px 0px 0px;
+    }
+    .custom-large-space-left{
+        padding-left: 0%;
+    }
+    .custom-large-space-right{
+        padding-right: 0%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .copyRightText{
+        padding-top: 0px;
+        padding-bottom: 28px;
+        text-align: left;
+    }
+}

@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2019, 2:16:25 AM
+    Author     : Meraj Hossain
+*/
+
+/***Top header***/
+.navbar-brand .logo{
+    width: 145px;
+    max-height:35px;
+    height: auto;
+    display: block;
+}
+/*******/
+.top-menu-wrapper {
+    background-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border: none;
+    padding: 18px 0;
+}
+/***top menu***/
+nav.top-menu{
+    padding: 0px;
+    li{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    a{
+        color: $white-fontcolor;
+        font-size: 16px;
+    }
+    li:hover a{
+        color: $blue-fontcolor-second;
+    }
+    li:hover > ul.dropdown-menu {
+    display: block;
+    }
+    ul.dropdown-menu a{
+        color: $gray-fontcolor;
+    }
+    .dropdown{
+        padding-right: 38.5px;
+    }
+    .dropdown-submenu {
+        position:relative;
+    }
+    .dropdown-submenu>.dropdown-menu {
+        top:0;
+        left:100%;
+        margin-top:-6px;
+    }
+    li > a:hover:after {
+        text-decoration: underline;
+        transform: rotate(-90deg);
+    }
+    .dropdown-submenu{
+        padding:5px 0px; 
+    }
+    .dropdown-menu li a{
+        width: max-content;
+        padding: 5px 20px;
+        color: $gray-fontcolor;
+    }
+    .dropdown-menu li:hover a{
+        color: $blue-fontcolor-second;
+        background: transparent;
+    }
+    .dropdown:after{
+        content: "\f107";
+        color: $white-fontcolor;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        top: 8px;
+        font-family: "FontAwesome";
+    }
+    .dropdown:hover:after{
+        color: $blue-fontcolor-second;
+    }
+}
+.sec-space{
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+}
+/****slider part***/
+.slider-space{
+    padding: 182px 0px 125px 0px;
+}
+.slider-bg-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  
+  &.slider-img {
+    height: 20%; 
+  }
+} 
+.slider-bg-image{
+    margin: -70px -150px 0px 0px;
+    padding: 97px 55px 0px 25px;
+    //background-image: url(../img/HRM-Illustration-1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+}

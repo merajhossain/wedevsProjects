@@ -1,0 +1,695 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2019, 2:16:40 AM
+    Author     : Meraj Hossain
+*/
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/***Varialbe declare***/
+/*custom css*/
+* {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif; }
+
+body, html {
+  height: 100%; }
+
+body {
+  overflow-x: hidden; }
+
+.btn {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif; }
+
+.btn:hover {
+  color: #37b6ff; }
+
+.no-padding-lg {
+  padding-left: 0;
+  padding-right: 0; }
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.box-shadow-default {
+  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.2); }
+
+.box-shadow-blue {
+  box-shadow: 0px 0px 60px 0px rgba(20, 191, 249, 0.2); }
+
+/**font color**/
+.text-white {
+  color: #ffffff; }
+
+.text-font {
+  color: #737779; }
+
+.text-dark {
+  color: #1b1b1b; }
+
+.text-blue {
+  color: #14bff9; }
+
+.text-blue-second {
+  color: #37b6ff; }
+
+.text-blue-third {
+  color: #c0ebff; }
+
+.text-gray {
+  color: #b7bec2; }
+
+.white-bg {
+  background: #ffffff; }
+
+.text-green {
+  color: #7e8578; }
+
+.text-dark-gray {
+  color: #8a8a8a; }
+
+.margin-top-lg {
+  margin-top: 40px; }
+
+/**Gradient mixin***/
+.gradientBG {
+  background: #0066ec;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #0066ec 0%, #00bcf9 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #0066ec 0%, #00bcf9 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #0066ec 0%, #00bcf9 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.gradientGreen {
+  background: #9fee00;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9fee00 0%, #60b100 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9fee00 0%, #60b100 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9fee00 0%, #60b100 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.gradientBlue {
+  background: #00bdfa;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #00bdfa 0%, #0066ec 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #00bdfa 0%, #0066ec 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #00bdfa 0%, #0066ec 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.whiteBlue {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+/**Button mixin**/
+.custom-btn-default {
+  background: #ffffff;
+  color: #2b62c9;
+  border: 1px solid #ffffff; }
+  .custom-btn-default:hover {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff; }
+  .custom-btn-default:focus {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(222, 222, 222, 0.5); }
+
+.custom-btn-success {
+  background: #dde7d7;
+  color: #458200;
+  border: 1px solid #dde7d7; }
+  .custom-btn-success:hover {
+    background: transparent;
+    color: #dde7d7;
+    border: 1px solid #dde7d7; }
+  .custom-btn-success:focus {
+    background: transparent;
+    color: #dde7d7;
+    border: 1px solid #dde7d7;
+    box-shadow: 0 0 0 0.2rem rgba(221, 231, 215, 0.5); }
+
+.custom-btn-danger {
+  background: #eae3dc;
+  color: #ba8c61;
+  border: 1px solid #eae3dc; }
+  .custom-btn-danger:hover {
+    background: transparent;
+    color: #eae3dc;
+    border: 1px solid #eae3dc; }
+  .custom-btn-danger:focus {
+    background: transparent;
+    color: #eae3dc;
+    border: 1px solid #eae3dc;
+    box-shadow: 0 0 0 0.2rem rgba(234, 227, 220, 0.5); }
+
+.custom-btn-info {
+  background: #e0e8f7;
+  color: #2b62c9;
+  border: 1px solid #e0e8f7; }
+  .custom-btn-info:hover {
+    background: transparent;
+    color: #e0e8f7;
+    border: 1px solid #e0e8f7; }
+  .custom-btn-info:focus {
+    background: transparent;
+    color: #e0e8f7;
+    border: 1px solid #e0e8f7;
+    box-shadow: 0 0 0 0.2rem rgba(224, 232, 237, 0.5); }
+
+.custom-btn-primary {
+  background: #2b62c9;
+  color: #ffffff;
+  border: 1px solid #2b62c9; }
+  .custom-btn-primary:hover {
+    background: transparent;
+    color: #2b62c9;
+    border: 1px solid #2b62c9; }
+  .custom-btn-primary:focus {
+    background: transparent;
+    color: #2b62c9;
+    border: 1px solid #2b62c9;
+    box-shadow: 0 0 0 0.2rem rgba(43, 98, 201, 0.5); }
+
+.custom-success-btn-icon {
+  background: #14d6e8;
+  color: #ffffff;
+  border: 1px solid #14d6e8; }
+  .custom-success-btn-icon:hover {
+    background: transparent;
+    color: #14d6e8;
+    border: 1px solid #14d6e8; }
+  .custom-success-btn-icon:focus {
+    background: transparent;
+    color: #14d6e8;
+    border: 1px solid #14d6e8;
+    box-shadow: 0 0 0 0.2rem rgba(20, 214, 232, 0.5); }
+
+.custom-primary-btn-icon {
+  background: #37b6ff;
+  color: #ffffff;
+  border: 1px solid #37b6ff; }
+  .custom-primary-btn-icon:hover {
+    background: transparent;
+    color: #37b6ff;
+    border: 1px solid #37b6ff; }
+  .custom-primary-btn-icon:focus {
+    background: transparent;
+    color: #37b6ff;
+    border: 1px solid #37b6ff;
+    box-shadow: 0 0 0 0.2rem rgba(55, 182, 255, 0.5); }
+
+.custom-outline-btn {
+  background: #ffffff;
+  color: #37b6ff;
+  border: 1px solid #ffffff; }
+  .custom-outline-btn:hover {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff; }
+  .custom-outline-btn:focus {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0 0.2rem rgba(78, 211, 15, 0.5); }
+
+/**Font weight**/
+.font-weight-700 {
+  font-weight: 100; }
+
+.font-weight-700 {
+  font-weight: 200; }
+
+.font-weight-700 {
+  font-weight: 300; }
+
+.font-weight-700 {
+  font-weight: 400; }
+
+.font-weight-700 {
+  font-weight: 500; }
+
+.font-weight-700 {
+  font-weight: 600; }
+
+.font-weight-700 {
+  font-weight: 700; }
+
+.font-weight-800 {
+  font-weight: 800; }
+
+.font-weight-900 {
+  font-weight: 900; }
+
+/**heading mixin**/
+h1 {
+  font-size: 36px;
+  color: #1b1b1b;
+  font-weight: 700;
+  line-height: 1.4em; }
+
+h2 {
+  font-size: 25px;
+  color: #1b1b1b;
+  font-weight: 700;
+  line-height: 1.4em; }
+
+h3 {
+  font-size: 20px;
+  color: #1b1b1b;
+  font-weight: 700;
+  line-height: 1.4em; }
+
+.font-size-15 {
+  font-size: 15px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-18 {
+  font-size: 18px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-22 {
+  font-size: 22px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-35 {
+  font-size: 35px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-25 {
+  font-size: 25px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-20 {
+  font-size: 20px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-45 {
+  font-size: 45px;
+  font-family: "Lato", Sans-serif; }
+
+.font-size-50 {
+  font-size: 45px;
+  font-family: "Lato", Sans-serif; }
+
+.no-bg {
+  background: transparent;
+  border-color: transparent; }
+
+/***font colors****/
+.color-primary {
+  color: #737779; }
+
+.color-white {
+  color: #ffffff; }
+
+.color-dark {
+  color: #1b1b1b; }
+
+.color-blue {
+  color: #14bff9; }
+
+.color-blue-second {
+  color: #37b6ff; }
+
+/***Background color****/
+.greenBg {
+  background: #f5f7f3;
+  border-top: 1px solid #dce7f1; }
+
+.grayBg {
+  background: #f5f7fa;
+  border-top: 1px solid #dce7f1; }
+
+/*********/
+/***icon ball**/
+.iconBall-one {
+  background: #c177fe;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #c177fe 0%, #9178fa 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #c177fe 0%, #9178fa 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #c177fe 0%, #9178fa 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #c177fe; }
+
+.iconBall-second {
+  background: #44efb3;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #44efb3 0%, #1bd7dd 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #44efb3 0%, #1bd7dd 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #44efb3 0%, #1bd7dd 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #44efb3; }
+
+.iconBall-third {
+  background: #ff9d78;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff9d78 0%, #fe8885 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff9d78 0%, #fe8885 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff9d78 0%, #fe8885 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px #ff9d78; }
+
+/****wave*****/
+/***bottom ad section***/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 18, 2019, 2:16:25 AM
+    Author     : Meraj Hossain
+*/
+/***Top header***/
+.navbar-brand .logo {
+  width: 145px;
+  max-height: 35px;
+  height: auto;
+  display: block; }
+
+/*******/
+.top-menu-wrapper {
+  background-color: transparent;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border: none;
+  padding: 18px 0; }
+
+/***top menu***/
+nav.top-menu {
+  padding: 0px; }
+  nav.top-menu li {
+    padding-left: 15px;
+    padding-right: 15px; }
+  nav.top-menu a {
+    color: #ffffff;
+    font-size: 16px; }
+  nav.top-menu li:hover a {
+    color: #37b6ff; }
+  nav.top-menu li:hover > ul.dropdown-menu {
+    display: block; }
+  nav.top-menu ul.dropdown-menu a {
+    color: #b7bec2; }
+  nav.top-menu .dropdown {
+    padding-right: 38.5px; }
+  nav.top-menu .dropdown-submenu {
+    position: relative; }
+  nav.top-menu .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px; }
+  nav.top-menu li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg); }
+  nav.top-menu .dropdown-submenu {
+    padding: 5px 0px; }
+  nav.top-menu .dropdown-menu li a {
+    width: max-content;
+    padding: 5px 20px;
+    color: #b7bec2; }
+  nav.top-menu .dropdown-menu li:hover a {
+    color: #37b6ff;
+    background: transparent; }
+  nav.top-menu .dropdown:after {
+    content: "\f107";
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    top: 8px;
+    font-family: "FontAwesome"; }
+  nav.top-menu .dropdown:hover:after {
+    color: #37b6ff; }
+
+.sec-space {
+  padding-top: 110px;
+  padding-bottom: 110px; }
+
+/****slider part***/
+.slider-space {
+  padding: 182px 0px 125px 0px; }
+
+.slider-bg-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center; }
+  .slider-bg-image.slider-img {
+    height: 20%; }
+
+.slider-bg-image {
+  margin: -70px -150px 0px 0px;
+  padding: 97px 55px 0px 25px;
+  background-image: url(../img/wperp-home-bg-illustration.svg);
+  background-position: top center;
+  background-repeat: no-repeat; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 21, 2019, 1:42:05 AM
+    Author     : Meraj Hossain
+*/
+/**Pluse**/
+.pulse {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 30px 30px 30px 30px;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(158, 237, 0, 0.4);
+  animation: pulse 2s infinite; }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(158, 237, 0, 0.4); }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(158, 237, 0, 0); }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(158, 237, 0, 0); } }
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(158, 237, 0, 0.4);
+    box-shadow: 0 0 0 0 rgba(158, 237, 0, 0.4); }
+  70% {
+    -moz-box-shadow: 0 0 0 20px rgba(158, 237, 0, 0);
+    box-shadow: 0 0 0 20px rgba(158, 237, 0, 0); }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(158, 237, 0, 0);
+    box-shadow: 0 0 0 0 rgba(158, 237, 0, 0); } }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2019, 5:19:49 PM
+    Author     : Meraj Hossain
+*/
+.custom-notification {
+  display: flex;
+  align-items: center;
+  padding: 40px 55px;
+  border-radius: 5px;
+  position: relative;
+  top: -35px;
+  z-index: 1; }
+
+.card-min-height {
+  min-height: 180px; }
+
+.custom-card-header {
+  cursor: pointer;
+  border-color: #eaefe5;
+  background-color: #fff;
+  border-radius: 5px;
+  border-bottom: none; }
+
+.custom-card-body {
+  padding: 0px 80px 15px 80px; }
+
+.product-screen-short-icon-right {
+  position: absolute;
+  top: 5px;
+  right: -25px; }
+
+.left-line-cross-image {
+  margin: 50px 0px 0px -210px; }
+
+.right-line-cross-image {
+  margin: 50px -210px 0px 0px; }
+
+.product-screen-short-icon-left {
+  position: absolute;
+  top: 5px;
+  left: -25px; }
+
+/***bottom ad section***/
+.bottom-ad-section {
+  background: url("../img/Bottom-CTA_BG-1.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%; }
+
+.rocket-icon-wrapper {
+  position: relative;
+  width: 100%; }
+
+.rocket-icon {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 35px 15PX; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 23, 2019, 5:18:11 PM
+    Author     : Meraj Hossain
+*/
+/****footer menu******/
+.nav.widget-nav li {
+  display: block;
+  width: 100%;
+  padding-bottom: 20px; }
+.nav.widget-nav a {
+  color: #657387;
+  font-size: 15px; }
+.nav.widget-nav a:hover {
+  color: #3a424e;
+  text-decoration: none; }
+
+.nav.social-nav li {
+  padding-top: 28px;
+  padding-right: 10px;
+  padding-bottom: 28px; }
+.nav.social-nav a {
+  color: #657387;
+  font-size: 16px; }
+.nav.social-nav a:hover {
+  color: #007bff; }
+
+.copyRightText {
+  padding-top: 28px;
+  text-align: right; }
+
+/****footer menu******/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 19, 2019, 9:00:30 PM
+    Author     : Meraj Hossain
+*/
+@media screen and (max-width: 1023px) {
+  .left-line-cross-image {
+    margin: 50px 0px 0px 0px; }
+
+  .top-menu-wrapper {
+    position: relative;
+    background: #0067ec; }
+
+  .navbar-toggler {
+    background: #fff; }
+
+  .navbar-collapse {
+    margin-top: 60px; }
+
+  nav.top-menu .dropdown-menu li a, nav.top-menu a {
+    padding: 10px 20px; }
+
+  ul.dropdown-menu {
+    margin-bottom: 20px; } }
+@media screen and (max-width: 980px) {
+  .no-padding-lg {
+    padding-left: 15;
+    padding-right: 15; }
+
+  .slider-space {
+    padding: 80px 0px 125px 0px; }
+
+  .slider-content {
+    text-align: center; }
+
+  .slider-bg-image {
+    margin: 70px 0px 0px 0px; }
+
+  .custom-large-space-left {
+    padding-left: 0%; }
+
+  .custom-large-space-right {
+    padding-right: 0%; } }
+@media screen and (max-width: 767px) {
+  .copyRightText {
+    padding-top: 0px;
+    padding-bottom: 28px;
+    text-align: left; } }
+
+/*# sourceMappingURL=style.css.map */
